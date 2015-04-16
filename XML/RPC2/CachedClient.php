@@ -41,7 +41,7 @@
 
 // dependencies {{{
 require_once('Cache/Lite.php');
-require_once('XML/RPC2/Exception.php');
+require_once('Exception.php');
 // }}}
 
 /**
@@ -207,7 +207,7 @@ class XML_RPC2_CachedClient {
      * @param string (optional)  Proxy server URI (defaults to no proxy)
      *
      */
-    public static function create($uri, $options = array()) 
+    public static function createClient($uri, $options = array())
     {
         return new XML_RPC2_CachedClient($uri, $options);
     }
@@ -299,8 +299,8 @@ class XML_RPC2_CachedClient {
     {
         if (!(isset($this->_clientObject))) {
             // If the XML_RPC2_Client object is not available, let's build it
-            require_once('XML/RPC2/Client.php');
-            $this->_clientObject = XML_RPC2_Client::create($this->_uri, $this->_options);
+            require_once('Client.php');
+            $this->_clientObject = XML_RPC2_Client::createClient($this->_uri, $this->_options);
         }               
         // the real function call...
         return call_user_func_array(array($this->_clientObject, $methodName), $parameters);

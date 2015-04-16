@@ -40,9 +40,9 @@
 // }}}
 
 // dependencies {{{
-require_once 'XML/RPC2/Exception.php';
-require_once 'XML/RPC2/Client.php';
-require_once 'XML/RPC2/Util/HTTPRequest.php';
+//require_once 'XML/RPC2/Exception.php';
+//require_once 'XML/RPC2/Client.php';
+//require_once 'XML/RPC2/Util/HTTPRequest.php';
 //}}}
 
 /**

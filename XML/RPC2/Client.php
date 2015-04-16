@@ -40,9 +40,9 @@
 // }}}
 
 // dependencies {{{
-require_once 'XML/RPC2/Exception.php';
-require_once 'XML/RPC2/Backend.php';
-require_once 'XML/RPC2/ClientHelper.php';
+require_once 'Exception.php';
+require_once 'Backend.php';
+require_once 'ClientHelper.php';
 // }}}
 
 /**
@@ -226,10 +226,10 @@ abstract class XML_RPC2_Client
      * @param string URI for the XML-RPC server
      * @param array (optional) associative array of options (see constructor)
      */
-    public static function create($uri, $options = array())
+    public static function createClient($uri, $options = array())
     {
         if (isset($this)) { // Method called non-statically forward to remote call() as RPC
-            $this->__call('create', func_get_args());
+            $this->__call('createClient', func_get_args());
         }
         if (isset($options['backend'])) {
             XML_RPC2_Backend::setBackend($options['backend']);
