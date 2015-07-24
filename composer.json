@@ -16,6 +16,12 @@
             "role": "Developer"
         }
     ],
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/ludekslevercz/HTTP_Request2"
+		}
+	],
     "autoload": {
         "classmap": [
             "./"
@@ -31,7 +37,7 @@
     "type": "library",
     "require": {
         "pear/pear_exception": "*",
-        "pear/http_request2": "*"
+        "pear/http_request2": "dev-nette"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
