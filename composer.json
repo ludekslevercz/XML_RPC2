@@ -37,7 +37,7 @@
     "type": "library",
     "require": {
         "pear/pear_exception": "*",
-        "pear/http_request2": "dev-nette"
+        "ludekvesely/http_request2": "dev-nette"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
