@@ -40,9 +40,9 @@
 // }}}
 
 // dependencies {{{
-require_once 'XML/RPC2/Exception.php';
-require_once 'XML/RPC2/Backend/Php/Value.php';
-require_once 'XML/RPC2/Backend/Php/Value/Struct.php';
+require_once __DIR__ . '/../../Exception.php';
+require_once __DIR__ . '/../../Backend/Php/Value.php';
+require_once __DIR__ . '/../../Backend/Php/Value/Struct.php';
 // }}}
 
 /**
