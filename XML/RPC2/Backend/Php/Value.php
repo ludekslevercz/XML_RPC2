@@ -40,8 +40,8 @@
 // }}}
 
 // dependencies {{{
-require_once 'XML/RPC2/Exception.php';
-require_once 'XML/RPC2/Value.php';
+require_once __DIR__ . '/../../Exception.php';
+require_once __DIR__ . '/../../Value.php';
 // }}}
 
 /**
