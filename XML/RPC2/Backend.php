@@ -41,7 +41,7 @@
 
 // dependencies {{{
 require_once 'Exception.php';
-include_once __DIR__ . '/../../../../../pear-core-minimal/src/PEAR.php';
+include_once __DIR__ . '/../../../../pear/pear-core-minimal/src/PEAR.php';
 // }}}
 
 /**
