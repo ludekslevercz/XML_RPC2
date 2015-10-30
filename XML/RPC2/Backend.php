@@ -41,7 +41,7 @@
 
 // dependencies {{{
 require_once 'Exception.php';
-require_once 'PEAR.php';
+include_once 'PEAR.php';
 // }}}
 
 /**
