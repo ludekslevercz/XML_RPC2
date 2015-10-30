@@ -176,7 +176,7 @@ abstract class XML_RPC2_Backend_Php_Value extends XML_RPC2_Value
         $explicitType = ucfirst(strtolower($explicitType));
         switch ($explicitType) {
             case 'I8':
-                require_once 'XML/RPC2/Backend/Php/Value/Scalar.php';
+                require_once __DIR__ . '/../../Backend/Php/Value/Scalar.php';
                 return XML_RPC2_Backend_Php_Value_Scalar::createFromNative($nativeValue, 'Integer64');
                 break;
             case 'I4':
@@ -185,24 +185,24 @@ abstract class XML_RPC2_Backend_Php_Value extends XML_RPC2_Value
             case 'Double':
             case 'String':
             case 'Nil':
-                require_once 'XML/RPC2/Backend/Php/Value/Scalar.php';
+                require_once __DIR__ . '/../../Backend/Php/Value/Scalar.php';
                 return XML_RPC2_Backend_Php_Value_Scalar::createFromNative($nativeValue);
                 break;
             case 'Datetime.iso8601':
             case 'Datetime':    
-                require_once 'XML/RPC2/Backend/Php/Value/Datetime.php';
+                require_once __DIR__ . '/../../Backend/Php/Value/Datetime.php';
                 return new XML_RPC2_Backend_Php_Value_Datetime($nativeValue);
                 break;
             case 'Base64':
-                require_once 'XML/RPC2/Backend/Php/Value/Base64.php';
+                require_once __DIR__ . '/../../Backend/Php/Value/Base64.php';
                 return new XML_RPC2_Backend_Php_Value_Base64($nativeValue);
                 break;
             case 'Array':
-                require_once 'XML/RPC2/Backend/Php/Value/Array.php';
+                require_once __DIR__ . '/../../Backend/Php/Value/Array.php';
                 return new XML_RPC2_Backend_Php_Value_Array($nativeValue);
                 break;
             case 'Struct':
-                require_once 'XML/RPC2/Backend/Php/Value/Struct.php';
+                require_once __DIR__ . '/../../Backend/Php/Value/Struct.php';
                 return new XML_RPC2_Backend_Php_Value_Struct($nativeValue);
                 break;
             default:
@@ -269,7 +269,7 @@ abstract class XML_RPC2_Backend_Php_Value extends XML_RPC2_Value
         } else {
             throw new XML_RPC2_DecodeException(sprintf('Unable to decode XML-RPC value. Value presented %s type nodes: %s.', count($valueType), $simpleXML->asXML()));
         }
-        require_once(sprintf('XML/RPC2/Backend/Php/Value/%s.php', $nativeType));
+        require_once(sprintf(__DIR__ . '/../../Backend/Php/Value/%s.php', $nativeType));
         $nativeType = 'XML_RPC2_Backend_Php_Value_' . $nativeType;
         return self::createFromNative(@call_user_func(array($nativeType, 'decode'), $simpleXML), $nodename);
     }
