@@ -40,12 +40,12 @@
 // }}}
 
 // dependencies {{{
-require_once 'XML/RPC2/Exception.php';
-require_once 'XML/RPC2/Util/HTTPRequest.php';
-require_once 'XML/RPC2/Value.php';
-require_once 'XML/RPC2/Client.php';
-require_once 'XML/RPC2/Backend/Php/Request.php';
-require_once 'XML/RPC2/Backend/Php/Response.php';
+require_once __DIR__ . '/../../Exception.php';
+require_once __DIR__ . '/../../Util/HTTPRequest.php';
+require_once __DIR__ . '/../../Value.php';
+require_once __DIR__ . '/../../Client.php';
+require_once __DIR__ . '/../../Backend/Php/Request.php';
+require_once __DIR__ . '/../../Backend/Php/Response.php';
 // }}}
 
 /**
